@@ -71,6 +71,7 @@ endpoint_mapping = {}
 
 def text2img(input_data):
     kwargs = input_data.dict()
+    print("KWARGS:: ", kwargs)
     res = model_runner.run(**kwargs)
     images = res[0]
     return images[0]
